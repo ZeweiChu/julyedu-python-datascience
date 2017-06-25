@@ -3,6 +3,7 @@
 ## 基本数据类型
 - 整型int
 - 浮点float
+- 数据类型强制转换
 - 四则运算
 - 字符串str
 - bool
@@ -11,6 +12,7 @@
 ## 变量
 - 变量赋值(assignment)
 - 引用变量
+- x += x, x *= y, x /= y
 
 
 ## 表达式(expression)
@@ -18,6 +20,7 @@
 
 ## 指令(statement)
 - python会执行一条指令，未必会返回一个结果
+- expression可以被当做一个statement，但是statement一般不是一个expression
 - 赋值statement
 
 ## 动态类型
