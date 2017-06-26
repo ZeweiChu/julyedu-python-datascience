@@ -13,6 +13,7 @@
 ### Anaconda environment安装
 - 安装一个新的environment: conda create -n [your_environment_name] python=[your_python_version]
 - 进入已经安装的environment: source activate [your_environment_name]
+- 在windows下使用: activate [your_environment_name]
 - 退出当前environment: source deactivate
 - 查看environment: conda info --envs
 - 更多的conda命令请查询官网文档: https://conda.io/docs/index.html
