@@ -77,4 +77,54 @@ append方法可以在list的末尾添加element
 >>> names + numbers
 ['Tensorflow', 'July', 'Keras', 'Torch', 'Caffe', 'Jack', 12, 12.5, [1, 2, 3], 1, 2, 3, 4, 5]
 
+- insert
+```
+>>> names = ["Tensorflow", "July", "Keras", "Torch", "Caffe"]
+>>> names.insert(2, "Happy")
+>>> names
+['Tensorflow', 'July', 'Happy', 'Keras', 'Torch', 'Caffe']
+>>> names.insert(-1, "Sad")
+>>> names
+['Tensorflow', 'July', 'Happy', 'Keras', 'Torch', 'Sad', 'Caffe']
+>>> names.insert(12, "Awesome")
+>>> names
+['Tensorflow', 'July', 'Happy', 'Keras', 'Torch', 'Sad', 'Caffe', 'Awesome']
+>>> names.insert(-100, "Bazinga")
+>>> names
+['Bazinga', 'Tensorflow', 'July', 'Happy', 'Keras', 'Torch', 'Sad', 'Caffe', 'Awesome']
+```
 
+- pop
+```
+>>> names.pop()
+'Awesome'
+>>> names
+['Bazinga', 'Tensorflow', 'July', 'Happy', 'Keras', 'Torch', 'Sad', 'Caffe']
+>>> names.pop()
+'Caffe'
+>>> names
+['Bazinga', 'Tensorflow', 'July', 'Happy', 'Keras', 'Torch', 'Sad']
+```
+
+- count
+```
+>>> names.count("Tensorflow")
+1
+```
+
+- reverse
+```
+>>> names.reverse()
+>>> names
+['Sad', 'Torch', 'Keras', 'Happy', 'July', 'Tensorflow', 'Bazinga']
+```
+
+- del删除element
+```
+>>> del names[1]
+>>> names
+['Sad', 'Keras', 'Happy', 'July', 'Tensorflow', 'Bazinga']
+>>> del(names[1])
+>>> names
+['Sad', 'Happy', 'July', 'Tensorflow', 'Bazinga']
+```

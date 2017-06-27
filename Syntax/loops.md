@@ -94,3 +94,29 @@ while i < 10:
 ```
 注意千万别忘了最后这一句```i += 1```否则就陷入死循环了。
 
+
+### break和continue的用法
+- break会直接让你跳出当前的循环
+```
+i = 0
+while 1:
+	print(i)
+	i += 1
+	if i >= 10:
+		break
+```
+
+- continue则会让你结束当前循环的环节直接跳到下一循环
+```
+i = 0
+while 1:
+	if i % 5 == 0:
+		i += 1
+		continue
+	print(i)
+	i += 1
+	
+	if i >= 20:
+		break
+```
+

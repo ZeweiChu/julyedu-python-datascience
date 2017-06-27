@@ -1,0 +1,4 @@
+# Class
+
+
+- pass statement
