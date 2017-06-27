@@ -73,9 +73,11 @@ append方法可以在list的末尾添加element
 
 
 两个list相加合并成新的list
+```
 >>> numbers = [1,2,3,4,5]
 >>> names + numbers
 ['Tensorflow', 'July', 'Keras', 'Torch', 'Caffe', 'Jack', 12, 12.5, [1, 2, 3], 1, 2, 3, 4, 5]
+```
 
 - insert
 ```
