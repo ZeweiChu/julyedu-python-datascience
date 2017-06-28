@@ -1,5 +1,18 @@
 # Loops
 
+## 安装jupyter notebook
+jupyter是一个非常方便的写python代码的工具
+使用pip安装jupyter
+```
+pip install jupyter
+````
+
+使用下面的命令开启一个jupyter服务
+```
+jupyter notebook
+```
+
+
 ## for loop
 
 ```
@@ -63,7 +76,8 @@ Caffe
 4 Caffe
 ```
 
-其实用enumerate更简单，直接帮你带上数字
+其实用enumerate更简
+单，直接帮你带上数字
 ```
 >>> for i, name in enumerate(names):
 ...  print(i, name)
@@ -75,7 +89,7 @@ Caffe
 4 Caffe
 ```
 
-for与list在一起使用可以写很多简洁的语句
+for与list在一起使用可以写很多简洁的语句, list comprehension
 ```
 >>> ["stupid " + name for name in names]
 ['stupid Tensorflow', 'stupid July', 'stupid Keras', 'stupid Torch', 'stupid Caffe']
@@ -118,5 +132,29 @@ while 1:
 	
 	if i >= 20:
 		break
+```
+
+
+## 小练习：输出一个fibonacci数列
+```
+print("while loop:")
+fibs = []
+i = 0
+j = 1
+while i < 500:
+	fibs.append(i)
+	tmp = j
+	j = i + j
+	i = tmp
+print(fibs)
+
+
+
+print("for loop:")
+fibs = [0, 1]
+for i in range(2, 15):
+	fibs.append(fibs[-1] + fibs[-2])
+
+print(fibs)
 ```
 
