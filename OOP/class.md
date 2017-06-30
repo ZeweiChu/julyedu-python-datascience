@@ -1,4 +1,0 @@
-# Class
-
-
-- pass statement

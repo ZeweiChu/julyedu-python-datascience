@@ -1,4 +1,55 @@
-# set, dictionary, tuple, jupyter notebook
+# more on list, set, dictionary, tuple
+
+## more on list
+
+### stack
+
+
+
+### queue
+```
+>>> from collections import deque
+>>> queue = deque(["julyedu", "fb", "google", "amazon"])
+>>> queue.append("apple")
+>>> queue
+deque(['julyedu', 'fb', 'google', 'amazon', 'apple'])
+>>> queue.popleft()
+'julyedu'
+>>> queue
+deque(['fb', 'google', 'amazon', 'apple'])
+>>> queue.pop()
+'apple'
+>>> queue
+deque(['fb', 'google', 'amazon'])
+```
+
+更多关于deque的信息请查看[deque](https://docs.python.org/3/library/collections.html#collections.deque)
+
+### 复习一下我们的list comprehension
+```
+>>> instructors = ["Han", "Chu", "July", "Wang"]
+>>> ["Mr. " + i for i in instructors]
+['Mr. Han', 'Mr. Chu', 'Mr. July', 'Mr. Wang']
+```
+
+如果我们想加上一些判断语句呢？
+```
+>>> ["Mr. " + i for i in instructors if i != "Wang"]
+['Mr. Han', 'Mr. Chu', 'Mr. July']
+>>> ["Mr. " + i if i != "Wang" else "Ms. " + i for i in instructors]
+['Mr. Han', 'Mr. Chu', 'Mr. July', 'Ms. Wang']
+```
+
+## nested list comprehension
+
+
+
+#### 小练习
+```
+>>> instructors = [["Han", "male"], ["July", "male"], ["Wang", "female"], ["Chu", "male"]] 
+>>> ["Mr. " + i[0] if i[1] == "male" else "Ms. " + i[0] for i in instructors]
+['Mr. Han', 'Mr. July', 'Ms. Wang', 'Mr. Chu']
+```
 
 ## set
 ```
