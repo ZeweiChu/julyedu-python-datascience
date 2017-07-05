@@ -21,8 +21,6 @@ fib(30)
 fib(100)
 ```
 
-### default argument
-
 
 ### 不定长度的arguments
 ```
@@ -32,6 +30,10 @@ def print_all(*args):
 
 print_all("hello", "world", "julyter", "notebook")
 ```
+
+### default argument
+concat例子
+
 
 ### 把一个tuple/list当做arguments
 
