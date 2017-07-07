@@ -1,0 +1,13 @@
+# binary trees
+
+## 简介
+
+binary search tree是一种树状数据结构，一棵tree由一群node组成，每一个node有一个left child (node)和一个right child (node)，所以我们称它为binary tree。有一个特殊的node叫root，是所有node的起始之处。除了root之外的其他node都有parent。没有child的node叫做leave。
+
+![binary search tree](images/bst.png)
+
+## insert
+
+
+
+[binary search tree implementation](https://stackoverflow.com/questions/2598437/how-to-implement-a-binary-tree)
