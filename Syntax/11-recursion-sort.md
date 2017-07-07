@@ -27,6 +27,12 @@ fibonacci(5) 15次
 
 ## demo project: sort
 
+python自带sorted函数
+```
+>>> sorted([2,51,31,12,8,14,55,11])
+[2, 8, 11, 12, 14, 31, 51, 55]
+```
+
 ```
 MergeSort(arr)
 	if length of arr is 1:
