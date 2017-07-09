@@ -1,19 +1,33 @@
+from abc import ABC, abstractmethod
+
+class Person(object):
+	#@abstractmethod
+	def __init__(self, name, ID, level=0):
+		self.name = name
+		self.ID = ID
+
+	#@abstractmethod
+	def get_info(self):
+		return "name: {}".format(self.name)
+
+a = Person("Aaron", 20)
+print(a.get_info())
 
 '''
 Student class
 
 '''
-class Student(object):
+class Student(Person):
 
 	# method
-	def __init__(self, name, level=0):
+	def __init__(self, name, ID, level=0):
 		# field
 		# self refers to the object that is being created
-		self.name = name
+		super().__init__(name, ID)
 		self.level = level
 
-	def print_info(self):
-		print("Name: {}, level: {}".format(self.name, self.level))
+	def get_info(self):
+		return "{} ,level: {}".format(super().get_info(), self.level)
 
 	def take_exam(self, grade):
 		if grade.upper() in ["A", "B", "C"]:
@@ -30,54 +44,18 @@ class Student(object):
 			return False
 
 
-
-# instantiate an object
-# july = Student("July", 15)
-# july.take_exam("A")
-# july.take_exam("B")
-# july.take_exam("C")
-# july.take_exam("D")
-# july.take_exam("F")
-# july.print_info() # 18
-
-# zewei = Student("Zewei")
-# zewei.print_info()
-# zewei.take_exam("A")
-# zewei.take_exam("B")
-# zewei.take_exam("C")
-# zewei.print_info()
-# zewei.graduate()
-# zewei.take_exam("A")
-# zewei.take_exam("B")
-# zewei.take_exam("C")
-# zewei.take_exam("A")
-# zewei.take_exam("B")
-# zewei.take_exam("C")
-# zewei.take_exam("A")
-# zewei.take_exam("B")
-# zewei.take_exam("C")
-# zewei.take_exam("A")
-# zewei.take_exam("B")
-# zewei.take_exam("C")
-# zewei.print_info()
-# zewei.graduate()
-# b = Student()
-# c = Student()
-
-class Employee(object):
+class Employee(Person):
 
 	def __init__(self, name, ID, title, salary, manager=None):
-		self.name = name
-		self.ID = ID
+		super().__init__(name, ID)
 		self.title = title
 		self.salary = salary
 		self.manager = manager
 
 	def get_info(self):
-		return "(Employee name: {}, title: {}, salary: {}, manager: {})".format(self.name, self.title, self.salary, self.manager.get_info() if self.manager is not None else "")
+		return "({}, title: {}, salary: {}, manager: {})".format(super().get_info(), self.title, self.salary, self.manager.get_info() if self.manager is not None else "No manager")
 
-	def __eq__(self, other):
-		return self.ID == other.ID
+
 
 july = Employee("July", 1, "CEO", 99999999)
 print(july.get_info())
@@ -122,12 +100,6 @@ print(c.get_info())
 print("Firing zewei!")
 c.fire(zewei)
 print(c.get_info())
-
-
-
-
-
-
 
 
 
