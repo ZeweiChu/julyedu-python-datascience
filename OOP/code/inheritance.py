@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class Person(object):
 	#@abstractmethod
-	def __init__(self, name, ID, level=0):
+	def __init__(self, name, ID):
 		self.name = name
 		self.ID = ID
 
