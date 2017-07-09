@@ -1,6 +1,6 @@
 # csv和json格式数据
 
-## csv
+## csv(comma separated values)
 
 关于module csv
 
@@ -9,7 +9,7 @@
 
 更多[csv document](https://docs.python.org/3/library/csv.html)
 
-## json
+## json (javascript object notation)
 
 关于module json
 

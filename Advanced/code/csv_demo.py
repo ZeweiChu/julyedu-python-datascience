@@ -1,14 +1,13 @@
 import csv
 import code
 
-in_file = open("SampleCSVFile_11kb.csv", "r")
+in_file = open("sample.csv", "r")
 csv_reader = csv.reader(in_file)
 data = list(csv_reader)
 print(data)
 in_file.close()
 
-
-in_file = open("SampleCSVFile_11kb.csv", "r")
+in_file = open("sample.csv", "r")
 csv_reader = csv.reader(in_file)
 for line in csv_reader:
 	print("line #: {}, content: {}".format(csv_reader.line_num, line))
