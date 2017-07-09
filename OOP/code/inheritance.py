@@ -1,17 +1,18 @@
 from abc import ABC, abstractmethod
 
-class Person(object):
-	#@abstractmethod
+
+class Person(ABC):
+	@abstractmethod
 	def __init__(self, name, ID):
 		self.name = name
 		self.ID = ID
 
-	#@abstractmethod
+	@abstractmethod
 	def get_info(self):
 		return "name: {}".format(self.name)
 
-a = Person("Aaron", 20)
-print(a.get_info())
+# a = Person("Aaron", 20)
+# print(a.get_info())
 
 '''
 Student class
@@ -100,6 +101,72 @@ print(c.get_info())
 print("Firing zewei!")
 c.fire(zewei)
 print(c.get_info())
+
+
+
+class Vehicle(ABC):
+
+	@abstractmethod
+	def __init__(self, make, model, year, ID, price):
+		self.make = make
+		self.model = model
+		self.year = year
+		self.ID = ID
+		self.price = price
+
+	@abstractmethod
+	def get_info(self):
+		return "make: {}, model: {}, year: {}, price: {}".format(self.make, self.model, self.year, self.price)
+
+	@abstractmethod
+	def run(self):
+		pass
+
+
+class Car(Vehicle):
+
+	def __init__(self, make, model, year, ID, price, speed):
+		super().__init__(make, model, year, ID, price)
+		self.speed = speed
+
+	def get_info(self):
+		return "This is a car. {}. Speed: {}km/h".format(super().get_info(), self.speed)
+
+	def run(self):
+		print("This car drives at speed {} km/h".format(self.speed))
+
+
+class Bicycle(Vehicle):
+
+	def __init__(self, make, model, year, ID, price):
+		super().__init__(make, model, year, ID, price)
+
+	def get_info(self):
+		return "This is a bicycle. {}.".format(super().get_info())
+
+	def run(self):
+		print("You can ride the bicycle at whatever speed you can")
+
+
+bmw = Car("BMW", "328xi", 2011, 1, 500000, 200)
+print(bmw.get_info())
+bmw.run()
+
+volkswagon = Car("Volkswagon", "tiguan", 2010, 2, 200000, 180)
+print(volkswagon.get_info())
+volkswagon.run()
+
+bicycle = Bicycle("Giant", "TCR", 2015, 2, 3000)
+print(bicycle.get_info())
+bicycle.run()
+
+
+
+
+
+
+
+
 
 
 
