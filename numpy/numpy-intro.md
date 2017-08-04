@@ -1,0 +1,1 @@
+https://www.datacamp.com/community/tutorials/python-numpy-tutorial#gs.v=WOAqw
